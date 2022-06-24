@@ -1,8 +1,10 @@
 import sys
+from app.sorter import Sorter
 
 
 def main():
-    pass
+    sorter = Sorter(2)
+    sorter.draw_card()
 
 
 if __name__ == "__main__":
