@@ -6,8 +6,8 @@ logger = logging.getLogger("lib.utils.logging")
 
 
 class Sorter:
-    def __init__(self, number_of_decks):
-        logger.info(f"Creating a {number_of_decks} deck card sorter.")
+    def __init__(self, number_of_decks: int):
+        logger.info(f"Creating a new {number_of_decks} deck card sorter...")
 
         self.all_decks = []
         self.all_cards = []
@@ -44,5 +44,5 @@ class Sorter:
             return
         except IndexError:
             logger.warning("Card sorter has run out of cards.")
-            logger.warning("Resetting card sorter.")
+            logger.warning("Resetting card sorter...")
             return self.__init__(len(self.all_decks))
