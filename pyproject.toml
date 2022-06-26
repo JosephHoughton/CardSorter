@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "card-sorter"
 version = "0.1.0"
-description = "Card sorting application. Demo for Bank of America interview."
+description = "Card sorting application. Demo code."
 authors = ["JosephHoughton <joseph.d.houghton@gmail.com>"]
 
 [tool.poetry.dependencies]
