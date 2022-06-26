@@ -1,8 +1,9 @@
-import sys
-from app.sorter import Sorter
-import logging
 import argparse
+import logging
 import pathlib
+import sys
+
+from app.sorter import Sorter
 from lib.utils.logging import initialise_logger
 
 logger = logging.getLogger("lib.utils.logging")
@@ -19,6 +20,7 @@ def parse_arguments():
         "-n",
         "--number_of_decks",
         dest="number_of_decks",
+        type=int,
         default=1,
         help="Number of decks to include in sorter.",
     )
@@ -34,9 +36,14 @@ def initialise_programme():
 
 def run_sorter(config):
     sorter = Sorter(config.number_of_decks)
-    for i in range(10):
-        sorter.draw_card()
+    sorter.draw_card()
     sorter.count_remaining_cards()
+    sorter.reset_sorter()
+    for i in range(260):
+        sorter.draw_card()
+
+    sorter.count_remaining_cards()
+    sorter.draw_card()
 
 
 def main():

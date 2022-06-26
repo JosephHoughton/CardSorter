@@ -13,7 +13,8 @@ class Deck:
 
     def substitute_special_card_names(self):
         """
-        Substitute generic card values for special value names (i.e. Jack, Queen, King & Ace)
+        Substitute generic card values for special
+        value names (i.e. Jack, Queen, King & Ace)
         """
         for card in self.cards:
             special_value = constants.NAMED_CARDS.get(card.value)

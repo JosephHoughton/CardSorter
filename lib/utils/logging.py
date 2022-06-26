@@ -2,7 +2,7 @@ import logging
 import sys
 
 
-def initialise_logger(config: object) -> None:
+def initialise_logger(config) -> None:
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
 
